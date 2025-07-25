@@ -7,30 +7,30 @@ export default function Footer() {
         
         {/* About */}
         <div>
-          <h3 className="text-xl font-bold mb-4">About Me</h3>
-          <p className="text-gray-400">
+          <h3 className="text-xl font-bold text-white dark:text-yellow-300 mb-4">About Me</h3>
+          <p className="text-white dark:text-yellow-300">
             I'm a passionate web developer with skills in React, Tailwind, and Java. I build fast, responsive, and accessible websites.
           </p>
         </div>
 
         {/* Quick Links */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
-          <ul className="space-y-2 text-gray-400">
-            <li><a href="#home" className="hover:text-white">Home</a></li>
-            <li><a href="#about" className="hover:text-white">About</a></li>
-            <li><a href="#projects" className="hover:text-white">Projects</a></li>
-            <li><a href="#skills" className="hover:text-white">Skills</a></li>
-            <li><a href="#contact" className="hover:text-white">Contact</a></li>
+          <h3 className="text-xl font-bold text-white dark:text-yellow-300 mb-4">Quick Links</h3>
+          <ul className="space-y-2 text-gray-400 dark:text-yellow-300">
+            <li><a href="#home" className="hover:text-white dark:text-yellow-300">Home</a></li>
+            <li><a href="#about" className="hover:text-white dark:text-yellow-300">About</a></li>
+            <li><a href="#projects" className="hover:text-white dark:text-yellow-300">Projects</a></li>
+            <li><a href="#skills" className="hover:text-white dark:text-yellow-300">Skills</a></li>
+            <li><a href="#contact" className="hover:text-white dark:text-yellow-300">Contact</a></li>
           </ul>
         </div>
 
         {/* Contact & Social */}
         <div>
-          <h3 className="text-xl font-bold mb-4">Contact</h3>
-          <ul className="text-gray-400 space-y-2">
+          <h3 className="text-xl font-bold text-white dark:text-yellow-300 mb-4">Contact</h3>
+          <ul className="text-gray-400 dark:text-yellow-300 space-y-2">
             <li className="flex items-center gap-2">
-              <FaEnvelope /> amith@example.com
+              <FaEnvelope /> yeshwanthreddy@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <FaPhone /> +91 98765 43210
@@ -38,21 +38,21 @@ export default function Footer() {
           </ul>
 
           <div className="flex gap-4 mt-4 text-xl">
-            <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a href="https://github.com/yourgithub" target="_blank" rel="noopener noreferrer" className="hover:text-white dark:text-yellow-300">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a href="https://linkedin.com/in/yourlinkedin" target="_blank" rel="noopener noreferrer" className="hover:text-white dark:text-yellow-300">
               <FaLinkedin />
             </a>
-            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-white">
+            <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer" className="hover:text-white dark:text-yellow-300">
               <FaFacebook />
             </a>
           </div>
         </div>
       </div>
 
-      <div className="text-center text-gray-500 text-sm mt-10 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Amith. All rights reserved.
+      <div className="text-center text-gray-500 dark:text-yellow-300 text-sm mt-10 border-t border-gray-700 pt-4">
+        © {new Date().getFullYear()} Yashwanth Reddy. All rights reserved.
       </div>
     </footer>
   );
