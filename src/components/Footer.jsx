@@ -30,7 +30,7 @@ export default function Footer() {
           <h3 className="text-xl font-bold text-white dark:text-yellow-300 mb-4">Contact</h3>
           <ul className="text-gray-400 dark:text-yellow-300 space-y-2">
             <li className="flex items-center gap-2">
-              <FaEnvelope /> yeshwanthreddy@gmail.com
+              <FaEnvelope /> basavarajkl@gmail.com
             </li>
             <li className="flex items-center gap-2">
               <FaPhone /> +91 98765 43210
@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       <div className="text-center text-gray-500 dark:text-yellow-300 text-sm mt-10 border-t border-gray-700 pt-4">
-        © {new Date().getFullYear()} Yashwanth Reddy. All rights reserved.
+        © {new Date().getFullYear()} Basavaraj KL. All rights reserved.
       </div>
     </footer>
   );
