@@ -1,6 +1,55 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { FaReact, FaJava, FaGithub, FaHtml5, FaCss3Alt } from 'react-icons/fa';
 import { SiTailwindcss, SiJavascript } from 'react-icons/si';
+
+// Child component for each skill card
+function TiltSkillCard({ icon, name, delay }) {
+  const cardRef = useRef(null);
+  const wrapperRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    const wrapper = wrapperRef.current;
+    const card = cardRef.current;
+    const rect = wrapper.getBoundingClientRect();
+
+    const x = e.clientX - rect.left;
+    const y = e.clientY - rect.top;
+
+    const centerX = rect.width / 2;
+    const centerY = rect.height / 2;
+
+    const rotateX = ((y - centerY) / centerY) * 10;
+    const rotateY = ((x - centerX) / centerX) * -10;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  };
+
+  const resetTilt = () => {
+    const card = cardRef.current;
+    card.style.transform = `rotateX(0deg) rotateY(0deg)`;
+  };
+
+  return (
+    <div
+      ref={wrapperRef}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={resetTilt}
+      className="perspective"
+      style={{ perspective: '1000px' }}
+      data-aos="zoom-in"
+      data-aos-delay={delay}
+    >
+      <div
+        ref={cardRef}
+        className="flex flex-col items-center space-y-3 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-[0_0_20px_#facc15] dark:hover:shadow-[0_0_20px_#facc15] transition-all duration-300 transform"
+        style={{ transformStyle: 'preserve-3d', transition: 'transform 0.2s ease' }}
+      >
+        <div className="text-4xl">{icon}</div>
+        <p className="text-gray-800 dark:text-yellow-300 font-medium">{name}</p>
+      </div>
+    </div>
+  );
+}
 
 export default function Skills() {
   const skills = [
@@ -19,15 +68,12 @@ export default function Skills() {
         <h2 className="text-4xl font-bold mb-10 text-gray-900 dark:text-yellow-300">My Skills</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
           {skills.map((skill, index) => (
-            <div
+            <TiltSkillCard
               key={index}
-              className="flex flex-col items-center space-y-3 bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition"
-              data-aos="zoom-in"
-              data-aos-delay={index * 100}
-            >
-              <div className="text-4xl">{skill.icon}</div>
-              <p className="text-gray-800 dark:text-yellow-300 font-medium">{skill.name}</p>
-            </div>
+              icon={skill.icon}
+              name={skill.name}
+              delay={index * 100}
+            />
           ))}
         </div>
       </div>
