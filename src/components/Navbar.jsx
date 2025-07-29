@@ -14,7 +14,7 @@ export default function Navbar() {
   return (
     <nav className="bg-white dark:bg-gray-900 shadow-md fixed w-full z-50">
       <div className="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <h1 className="text-xl font-bold text-gray-900 dark:text-yellow-300">Yashwanth Reddy</h1>
+        <h1 className="text-xl font-bold text-gray-900 dark:text-yellow-300">Basavaraj KL</h1>
         <div className="hidden md:flex space-x-6 text-gray-700 dark:text-yellow-300">
           <a href="#about">About</a>
           <a href="#skills">Skills</a>
