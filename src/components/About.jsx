@@ -12,7 +12,7 @@ export default function About() {
           About Me
         </h2>
         <p className="text-lg text-gray-700 dark:text-yellow-300 leading-relaxed">
-          Hello! I'm <span className="font-semibold text-indigo-600 dark:text-indigo-400">Yashwanth Reddy</span>,
+          Hello! I'm <span className="font-semibold text-indigo-600 dark:text-indigo-400">Basavaraj KL</span>,
           a passionate React developer from Karnataka with a focus on creating engaging, responsive,
           and accessible websites. I enjoy solving problems with clean code and beautiful UI design.
         </p>
